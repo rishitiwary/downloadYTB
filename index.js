@@ -14,6 +14,7 @@ app.get("/download/:id", (req, res) => {
         preferFreeFormats: true,
         addHeader: ["referer:youtube.com", "user-agent:googlebot"]
     }).then((output) => {
+        
         // Log the entire output for debugging
         // console.log("Download information: ", output);
 
