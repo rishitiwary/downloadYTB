@@ -15,7 +15,7 @@ app.get("/download/:id", (req, res) => {
         addHeader: ["referer:youtube.com", "user-agent:googlebot"]
     }).then((output) => {
         // Log the entire output for debugging
-        console.log("Download information: ", output);
+        // console.log("Download information: ", output);
 
         // Find the format with format_id '18'
         const format18 = output.formats.find(format => format.format_id === '18');
