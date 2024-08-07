@@ -19,7 +19,6 @@
         "morgan": "^1.10.0",
         "mysql2": "^3.10.3",
         "nodemon": "^3.0.1",
-        "youtube-dl": "^3.5.0",
         "youtube-dl-exec": "^3.0.7",
         "ytdl-core": "^4.11.5"
     }
