@@ -22,6 +22,7 @@ async function extractText(filePath) {
 
 app.get("/download/:id", (req, res) => {
     const videoId = req.params.id;
+    console.log('videoId',videoId);
     const ytUrl = `https://www.youtube.com/watch?v=${videoId}`;
     youtubedl(ytUrl, {
         dumpSingleJson: true,
