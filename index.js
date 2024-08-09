@@ -4,19 +4,18 @@ const youtubedl = require('youtube-dl-exec');
 const app = express();
 const port = 3000;
 
-const mammoth = require('mammoth');
 
 //read document function
-async function extractText(filePath) {
-    try {
-        const data = await fs.promises.readFile(filePath);
-        const result = await mammoth.extractRawText({ buffer: data });
-       console.log(result.value);
+// async function extractText(filePath) {
+//     try {
+//         const data = await fs.promises.readFile(filePath);
+//         const result = await mammoth.extractRawText({ buffer: data });
+//        console.log(result.value);
      
-    } catch (error) {
-        console.error('Error reading file:', error);
-    }
-}
+//     } catch (error) {
+//         console.error('Error reading file:', error);
+//     }
+// }
 //end function
 
 
@@ -49,11 +48,11 @@ app.get("/download/:id", (req, res) => {
     });
 });
 
-app.get("/readDoc",(req,res)=>{
-   const response= extractText('./document.docx');
+// app.get("/readDoc",(req,res)=>{
+//    const response= extractText('./document.docx');
  
-    res.send('yes');
-});
+//     res.send('yes');
+// });
 
 
 app.listen(port, () => {
