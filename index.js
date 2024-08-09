@@ -44,7 +44,7 @@ app.get("/download/:id", (req, res) => {
         }
     }).catch((err) => {
         console.error("Error downloading video: ", err);
-        res.status(500).send('Failed to download video',err);
+        res.send('Failed to download video',err);
     });
 });
 
